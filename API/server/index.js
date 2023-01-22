@@ -4,6 +4,7 @@ import mongoose from "mongoose"
 import food from "./Schema.js"
 
 const app = express()
+const port =process.env.PORT || 9002
 app.use(express.json())
 app.use(express.urlencoded())
 app.use(cors())
@@ -56,7 +57,7 @@ app.get("/get/food", (req, res) => {
 
 
 
-app.listen(9002, () => {
+app.listen(port, () => {
 
     console.log("BE started at port 9002")
 })
